@@ -1,4 +1,4 @@
-package com.zhangjun.guli.product;
+package com.zhangjun.guli.gulimallproduct;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

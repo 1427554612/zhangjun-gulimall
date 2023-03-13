@@ -12,6 +12,10 @@
 
     <modules>
         <module>gulimall-product</module>
+        <module>gulimall-coupon</module>
+        <module>gulimall-order</module>
+        <module>gulimall-ware</module>
+        <module>gulimall-member</module>
     </modules>
 
 </project>
