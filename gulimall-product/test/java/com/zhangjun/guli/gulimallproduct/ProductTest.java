@@ -18,7 +18,7 @@ public class ProductTest {
     @Test
     public void test(){
         BrandEntity brandEntity = new BrandEntity();
-        brandEntity.setDescript("huawei");
+        brandEntity.setDescript("siwang");
         brandService.save(brandEntity);
         System.out.println("保存成功");
     }
