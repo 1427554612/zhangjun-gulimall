@@ -5,6 +5,7 @@ import com.zhangjun.guli.common.utils.PageUtils;
 import com.zhangjun.guli.common.utils.R;
 import com.zhangjun.guli.gulimallproduct.entity.CategoryEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,5 +18,10 @@ import java.util.Map;
 public interface CategoryService extends IService<CategoryEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 查询出所有分类和子分类、用树结构组装起来
+     */
+    List<CategoryEntity> listWithTree();
 }
 
