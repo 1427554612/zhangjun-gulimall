@@ -29,15 +29,15 @@ public class AttrAttrgroupRelationController {
     @Autowired
     private AttrAttrgroupRelationService attrAttrgroupRelationService;
 
-    @Value("${data.name}")
-    private String name;
-    @Value("${data.password}")
-    private String password;
-
-    @GetMapping("/demo")
-    public R demoConfig(){
-        return R.ok().put("name", name).put("password",password);
-    }
+//    @Value("${data.name}")
+//    private String name;
+//    @Value("${data.password}")
+//    private String password;
+//
+//    @GetMapping("/demo")
+//    public R demoConfig(){
+//        return R.ok().put("name", name).put("password",password);
+//    }
 
     /**
      * 列表

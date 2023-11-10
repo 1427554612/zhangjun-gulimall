@@ -33,7 +33,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
 
     /**
-     * 查询出所有分类和子分类、用树结构组装起来
+     * 递归查找所有菜单，并用树结构封装起来
      */
     @Override
     public List<CategoryEntity> listWithTree() {
@@ -72,6 +72,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
      */
     private List<CategoryEntity> getChilrdens(CategoryEntity entity,List<CategoryEntity> list) {
         List<CategoryEntity> children = list.stream().filter(categoryEntity -> {
+            // 当遍历的菜单的父id == 当前菜单的 子id 、则 遍历菜单就是当前菜单的子菜单
             return categoryEntity.getParentCid() == entity.getCatId();
         }).map(menu -> {
             menu.setChildren(getChilrdens(menu, list));

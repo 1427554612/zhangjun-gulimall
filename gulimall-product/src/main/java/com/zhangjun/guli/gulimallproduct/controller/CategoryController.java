@@ -34,7 +34,7 @@ public class CategoryController {
 
 
     /**
-     * 查询出所有分类和子分类、用树结构组装起来
+     * 递归查找所有菜单，并用树结构封装起来
      */
     @RequestMapping("/list/tree")
     //@RequiresPermissions("gulimallproduct:category:list")

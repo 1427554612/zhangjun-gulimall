@@ -20,7 +20,7 @@ public interface CategoryService extends IService<CategoryEntity> {
     PageUtils queryPage(Map<String, Object> params);
 
     /**
-     * 查询出所有分类和子分类、用树结构组装起来
+     * 递归查找所有菜单，并用树结构封装起来
      */
     List<CategoryEntity> listWithTree();
 
