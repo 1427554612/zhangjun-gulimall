@@ -1,6 +1,25 @@
+# 开启执行器api、用于兼容端点信息
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+
+# 请求到网关的时候打印日志
+logging:
+  level:
+    org.springframework.cloud.agteway: info
+
+# 网关配置
 spring:
   cloud:
     gateway:
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 5s
       routes:
         - id: product_route
           uri: lb://gulimall-product
@@ -36,3 +55,5 @@ spring:
             - Path=/api/**
           filters:
             - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+
